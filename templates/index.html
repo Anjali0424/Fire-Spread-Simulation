@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Fire Spread Simulation</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <h1>🔥 Fire Spread Simulation</h1>
+
+  <!-- CANVAS GRID -->
+  <canvas id="canvas" width="720" height="720"></canvas>
+
+  <!-- CONTROL BUTTONS -->
+  <div id="buttons">
+    <button id="simulateBtn">Simulate 🔥</button>
+    <button id="pauseBtn">Pause ⏸</button>
+    <button id="resetBtn">Reset 🔁</button>
+  </div>
+
+  <!-- BOTTOM PANEL -->
+  <div id="bottom-panel">
+    <div class="box stats">
+      <p>⏱ Time: <span id="time">0</span>s</p>
+      <p>🟢 Escaped: <span id="escaped">0</span></p>
+      <p>🔴 Trapped: <span id="trapped">0</span></p>
+    </div>
+
+    <div class="box legend">
+      <strong>Legend</strong>
+      <div><span class="boxx human"></span> Humans (Blue)</div>
+      <div><span class="boxx fire"></span> Fire (Orange/Red)</div>
+      <div><span class="boxx wall"></span> Wall (Black)</div>
+      <div><span class="boxx exit"></span> Exit (Green)</div>
+      <div><span class="boxx safe"></span> Safe Path (Yellow)</div>
+    </div>
+  </div>
+
+  <audio id="alarm" src="{{ url_for('static', filename='fire_alert.mp3') }}"></audio>
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

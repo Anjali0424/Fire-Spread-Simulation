@@ -1,0 +1,77 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at center, #1c2635, #0c111a);
+  color: #e6eef8;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 15px;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff8a33;
+  text-shadow: 0 0 18px rgba(255, 115, 0, 0.9);
+}
+
+/* CANVAS GRID */
+canvas {
+  display: block;
+  margin: 15px auto;
+  border-radius: 12px;
+  background: #15202c; /* NEW GRID BG */
+  box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+/* BUTTONS */
+#buttons {
+  margin: 18px 0;
+}
+#buttons button {
+  padding: 10px 32px;
+  margin: 0 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 17px;
+  cursor: pointer;
+  color: white;
+  transition: 0.2s;
+}
+#simulateBtn { background: #ff6a00; }
+#pauseBtn { background: #e63c3c; }
+#resetBtn { background: #1e80ff; }
+button:hover { transform: scale(1.06); }
+
+/* BOTTOM PANEL */
+#bottom-panel {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+/* PANEL BOXES */
+.box {
+  background: rgba(255,255,255,0.05);
+  padding: 14px;
+  width: 28%;
+  border-radius: 12px;
+  height: 170px;
+  overflow-y: auto;
+  text-align: left;
+}
+
+/* LEGEND CUBE COLORS */
+.boxx {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border-radius: 3px;
+  margin-right: 8px;
+}
+.human { background: #35a7ff; }
+.fire { background: #ff3700; }
+.wall { background: #000; }
+.exit { background: #3dff62; }
+.safe { background: yellow; }
